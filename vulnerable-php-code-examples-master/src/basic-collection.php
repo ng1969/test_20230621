@@ -1,7 +1,7 @@
 <?php
 
 // Cross-Site Scripting (XSS)
-$name = $_GET['name'];
+$name = (isset($_GET['name']) ? $_GET['name'] : '');
 echo('Hello ' . $name);
 
 // SQL Injection
